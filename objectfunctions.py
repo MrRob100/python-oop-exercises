@@ -7,6 +7,7 @@ class ParentClass:
 
 class ChildClass(ParentClass):
     def __init__(self):
+        super().__init__()
         print("Clild Class Object Created")
 
 parent = ParentClass()
@@ -29,6 +30,9 @@ child = ChildClass()
 # print(issubclass(ChildClass, int))
 # print(issubclass(ChildClass, (int, ParentClass)))
 
-print(hasattr(parent, 'a'))
-print(hasattr(parent, 'someMethod'))
-print(hasattr(parent, 'b'))
+# print(hasattr(parent, 'a'))
+# print(hasattr(parent, 'someMethod'))
+# print(hasattr(parent, 'b'))
+
+
+print(child.a) #can access parents attribute as we have super().__init__
